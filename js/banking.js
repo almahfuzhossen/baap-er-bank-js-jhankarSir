@@ -9,7 +9,11 @@ document.getElementById('deposit-button').addEventListener('click', function(){
     const previousDepositTotal = parseFloat(depositTotalText);
     depositTotal.innerText =  previousDepositTotal + depositAmount;
     // update balance
-    
+    const balanceTotal = document.getElementById('balance-total');
+    const balanceTotalText = balanceTotal.innerText;
+    const previousBalanceTotal = parseFloat(balanceTotalText);
+    balanceTotal.innerText = previousBalanceTotal + depositAmount;
+
     
     // clear deposit input field
     depositInput.value = '';
