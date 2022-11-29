@@ -32,4 +32,10 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
     withdrawTotal.innerText = PreviousWithdrawTotal + withdrawAmount;
 
 
+// update balance after withdraw total
+const balanceTotal = document.getElementById('balance-total');
+const balanceTotalText = balanceTotal.innerText;
+const previousBalanceTotalText = parseFloat(balanceTotalText);
+balanceTotal.innerText = previousBalanceTotalText - withdrawAmount;
+
 })
