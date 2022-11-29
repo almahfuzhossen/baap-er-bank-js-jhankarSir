@@ -17,4 +17,19 @@ document.getElementById('deposit-button').addEventListener('click', function(){
     
     // clear deposit input field
     depositInput.value = '';
+});
+
+// handle withdraw button
+document.getElementById('withdraw-button').addEventListener('click', function(){
+    const withdrawInput = document.getElementById('withdraw-field');
+    const withdrawAmountText = withdrawInput.value;
+    const withdrawAmount = parseFloat(withdrawAmountText);
+
+    // update withdraw total
+    const withdrawTotal = document.getElementById('withdraw-total');
+    const PreviousWithdrawTotalText = withdrawTotal.innerText;
+    const PreviousWithdrawTotal = parseFloat(PreviousWithdrawTotalText);
+    withdrawTotal.innerText = PreviousWithdrawTotal + withdrawAmount;
+
+
 })
